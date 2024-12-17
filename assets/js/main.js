@@ -147,6 +147,7 @@
     imagesLoaded(isotopeItem.querySelector('.isotope-container'), function () {
       initIsotope = new Isotope(isotopeItem.querySelector('.isotope-container'), {
         itemSelector: '.isotope-item',
+        gutter: 20,
         layoutMode: layout,
         filter: filter,
         sortBy: sort
