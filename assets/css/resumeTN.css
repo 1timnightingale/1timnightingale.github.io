@@ -41,3 +41,10 @@ a {
   font-size: 2.0em;
   color: #1890ff;
 }
+
+@media (prefers-color-scheme: dark) {
+  .education-icon {
+    color: #40a9ff;
+    /* Lighter blue for dark mode, if needed */
+  }
+}
