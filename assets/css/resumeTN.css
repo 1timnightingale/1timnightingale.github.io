@@ -29,11 +29,15 @@ header.masthead .bg-circle {
   background: linear-gradient(0deg, #ee0979 0%, #ff6a00 100%);
 }
 
-#resume {
-}
+#resume {}
 
 a {
   color: rgba(var(--bs-link-color-rgb), var(--bs-link-opacity, 1));
   text-decoration: none;
 }
 
+.section-divider {
+  border: none;
+  border-top: 2px dashed #ccc;
+  margin: 24px 0;
+}
