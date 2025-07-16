@@ -39,5 +39,7 @@ a {
 .section-divider {
   border: none;
   border-top: 2px dashed #ccc;
+  border-right: 2px dashed #ccc;
+  border-left: 2px dashed #ccc;
   margin: 24px 0;
 }
