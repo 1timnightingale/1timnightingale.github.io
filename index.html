@@ -1,695 +1,273 @@
 <!DOCTYPE html>
-<html data-bs-theme="auto" lang="en">
+<html lang="en">
 
 <head>
-    <meta charset="utf-8">
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-MXCPLWY5XV"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag() { dataLayer.push(arguments); }
-        gtag('js', new Date());
-
-        gtag('config', 'G-MXCPLWY5XV');
-    </script>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
-    <title>Tim Nightingale</title>
-    <meta name="twitter:description"
-        content="Expert in data architecture and analytics with over 24 years experience. ">
-    <meta name="twitter:card" content="summary">
-    <meta property="og:type" content="website">
-    <meta name="twitter:title" content="Tim Nightingale">
-    <meta name="description" content="Expert in data architecture and analytics with over 24 years experience. ">
-    <meta property="og:image" content="assets/img/Tim-Headshot3.jpg">
-    <script>
-        (function () {
-
-            // JavaScript snippet handling Dark/Light mode switching
-
-            const getStoredTheme = () => localStorage.getItem('theme');
-            const setStoredTheme = theme => localStorage.setItem('theme', theme);
-            const forcedTheme = document.documentElement.getAttribute('data-bss-forced-theme');
-
-            const getPreferredTheme = () => {
-
-                if (forcedTheme) return forcedTheme;
-
-                const storedTheme = getStoredTheme();
-                if (storedTheme) {
-                    return storedTheme;
-                }
-
-                const pageTheme = document.documentElement.getAttribute('data-bs-theme');
-
-                if (pageTheme) {
-                    return pageTheme;
-                }
-
-                return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
-            }
-
-            const setTheme = theme => {
-                if (theme === 'auto' && window.matchMedia('(prefers-color-scheme: dark)').matches) {
-                    document.documentElement.setAttribute('data-bs-theme', 'dark');
-                } else {
-                    document.documentElement.setAttribute('data-bs-theme', theme);
-                }
-            }
-
-            setTheme(getPreferredTheme());
-
-            const showActiveTheme = (theme, focus = false) => {
-                const themeSwitchers = [].slice.call(document.querySelectorAll('.theme-switcher'));
-
-                if (!themeSwitchers.length) return;
-
-                document.querySelectorAll('[data-bs-theme-value]').forEach(element => {
-                    element.classList.remove('active');
-                    element.setAttribute('aria-pressed', 'false');
-                });
-
-                for (const themeSwitcher of themeSwitchers) {
-
-                    const btnToActivate = themeSwitcher.querySelector('[data-bs-theme-value="' + theme + '"]');
-
-                    if (btnToActivate) {
-                        btnToActivate.classList.add('active');
-                        btnToActivate.setAttribute('aria-pressed', 'true');
-                    }
-                }
-            }
-
-            window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', () => {
-                const storedTheme = getStoredTheme();
-                if (storedTheme !== 'light' && storedTheme !== 'dark') {
-                    setTheme(getPreferredTheme());
-                }
-            });
-
-            window.addEventListener('DOMContentLoaded', () => {
-                showActiveTheme(getPreferredTheme());
-
-                document.querySelectorAll('[data-bs-theme-value]')
-                    .forEach(toggle => {
-                        toggle.addEventListener('click', (e) => {
-                            e.preventDefault();
-                            const theme = toggle.getAttribute('data-bs-theme-value');
-                            setStoredTheme(theme);
-                            setTheme(theme);
-                            showActiveTheme(theme);
-                        })
-                    })
-            });
-        })();
-    </script>
-    <link rel="icon" type="image/png" sizes="910x613" href="assets/img/TNCropped.png">
-    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
-    <link rel="stylesheet"
-        href="https://fonts.googleapis.com/css?family=Catamaran:100,200,300,400,500,600,700,800,900&amp;display=swap">
-    <link rel="stylesheet"
-        href="https://fonts.googleapis.com/css?family=Lato:100,100i,300,300i,400,400i,700,700i,900,900i&amp;display=swap">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
-    <link rel="stylesheet" href="assets/css/Lightbox-Gallery-baguetteBox.min.css">
-    <link rel="stylesheet" href="assets/css/Projects-Grid-Horizontal-images.css">
-    <link rel="stylesheet" href="assets/css/resumeTN.css">
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tim Nightingale | Analytics Architect</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&family=Space+Grotesk:wght@300;400;600&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="./style.css">
 </head>
 
 <body>
-    <nav class="navbar navbar-expand-lg fixed-top bg-dark navbar-custom navbar-dark">
-        <div class="container">
-            <div class="theme-switcher dropdown" style="margin-right: 1rem;"><a class="dropdown-toggle"
-                    aria-expanded="false" data-bs-toggle="dropdown" href="#" style="color: var(--bs-gray);"><svg
-                        xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor"
-                        viewBox="0 0 16 16" class="bi bi-sun-fill mb-1">
-                        <path
-                            d="M8 12a4 4 0 1 0 0-8 4 4 0 0 0 0 8M8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0m0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13m8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5M3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8m10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0m-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0zm9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707M4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708z">
-                        </path>
-                    </svg></a>
-                <div class="dropdown-menu"><a class="dropdown-item d-flex align-items-center" href="#"
-                        data-bs-theme-value="light"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em"
-                            fill="currentColor" viewBox="0 0 16 16" class="bi bi-sun-fill opacity-50 me-2">
-                            <path
-                                d="M8 12a4 4 0 1 0 0-8 4 4 0 0 0 0 8M8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0m0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13m8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5M3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8m10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0m-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0zm9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707M4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708z">
-                            </path>
-                        </svg>Light</a><a class="dropdown-item d-flex align-items-center" href="#"
-                        data-bs-theme-value="dark"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em"
-                            fill="currentColor" viewBox="0 0 16 16" class="bi bi-moon-stars-fill opacity-50 me-2">
-                            <path
-                                d="M6 .278a.768.768 0 0 1 .08.858 7.208 7.208 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277.527 0 1.04-.055 1.533-.16a.787.787 0 0 1 .81.316.733.733 0 0 1-.031.893A8.349 8.349 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71 0 4.266 2.114 1.312 5.124.06A.752.752 0 0 1 6 .278">
-                            </path>
-                            <path
-                                d="M10.794 3.148a.217.217 0 0 1 .412 0l.387 1.162c.173.518.579.924 1.097 1.097l1.162.387a.217.217 0 0 1 0 .412l-1.162.387a1.734 1.734 0 0 0-1.097 1.097l-.387 1.162a.217.217 0 0 1-.412 0l-.387-1.162A1.734 1.734 0 0 0 9.31 6.593l-1.162-.387a.217.217 0 0 1 0-.412l1.162-.387a1.734 1.734 0 0 0 1.097-1.097l.387-1.162zM13.863.099a.145.145 0 0 1 .274 0l.258.774c.115.346.386.617.732.732l.774.258a.145.145 0 0 1 0 .274l-.774.258a1.156 1.156 0 0 0-.732.732l-.258.774a.145.145 0 0 1-.274 0l-.258-.774a1.156 1.156 0 0 0-.732-.732l-.774-.258a.145.145 0 0 1 0-.274l.774-.258c.346-.115.617-.386.732-.732L13.863.1z">
-                            </path>
-                        </svg>Dark</a><a class="dropdown-item d-flex align-items-center" href="#"
-                        data-bs-theme-value="auto"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em"
-                            fill="currentColor" viewBox="0 0 16 16" class="bi bi-circle-half opacity-50 me-2">
-                            <path d="M8 15A7 7 0 1 0 8 1zm0 1A8 8 0 1 1 8 0a8 8 0 0 1 0 16"></path>
-                        </svg>Auto</a></div>
-            </div><a class="navbar-brand" href="#"><span data-bs-toggle="collapse"
-                    data-bs-target=".navbar-collapse.show">Tim Nightingale</span></a><button data-bs-toggle="collapse"
-                class="navbar-toggler" data-bs-target="#navbarResponsive" type="button"><span
-                    class="visually-hidden">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
-            <div class="collapse navbar-collapse" id="navbarResponsive">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item"><a class="nav-link" href="#resume"><span data-bs-toggle="collapse"
-                                data-bs-target=".navbar-collapse.show">Resume</span></a></li>
-                    <li class="nav-item"><a class="nav-link" href="#career"><span data-bs-toggle="collapse"
-                                data-bs-target=".navbar-collapse.show">Career Highlights</span></a></li>
-                    <li class="nav-item"><a class="nav-link" href="#technology"><span data-bs-toggle="collapse"
-                                data-bs-target=".navbar-collapse.show">Technology</span></a></li>
-                </ul>
-            </div>
+  <div id="bg-canvas"></div>
+
+  <nav class="glass-nav">
+    <div class="nav-content">
+      <a href="#" class="logo">
+        <img src="./TN_round_white.png" alt="TN Logo" class="logo-img">
+      </a>
+      <ul class="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <main>
+    <section id="hero">
+      <div class="hero-content">
+        <p class="overline">Hello, I'm</p>
+        <h1 class="glitch" data-text="Tim Nightingale">Tim Nightingale</h1>
+        <h2 class="typing-effect">Analytics Architect & Data Leader</h2>
+        <p class="hero-desc">Translating raw data into actionable insight and measurable business value.</p>
+        <div class="cta-group">
+          <a href="#experience" class="btn primary">View Experience</a>
+          <a href="#contact" class="btn secondary">Contact Me</a>
         </div>
-    </nav>
-    <header class="text-center text-white masthead" style="border-color: var(--bs-light);">
-        <div class="masthead-content">
-            <div class="container">
-                <h1 class="masthead-heading mb-0">Tim Nightingale</h1>
-                <h2 class="masthead-subheading mb-0"><strong>Adaptive Innovator</strong></h2>
-                <figure style="margin-top: 16px;padding: 10px;border-style: solid;border-color: var(--bs-primary);">
-                    <blockquote class="blockquote">
-                        <p class="mb-0">PowerPoint is like being trapped in the style of early Egyptian flatland
-                            cartoons rather than using the more effective tools of Renaissance visual representation.
-                        </p>
-                    </blockquote>
-                    <figcaption class="blockquote-footer" style="color: var(--bs-light);">Edward R Tufte, Beautiful
-                        Evidence</figcaption>
-                </figure>
-            </div>
+      </div>
+      <div class="hero-visual">
+        <!-- Abstract data visualization via CSS/JS -->
+        <div class="image-container">
+          <img src="./Tim-Headshot3.jpg" alt="Tim Nightingale" class="hero-img">
+          <div class="img-glow"></div>
         </div>
-        <div class="bg-circle-1 bg-circle"></div>
-        <div class="bg-circle-2 bg-circle"></div>
-        <div class="bg-circle-3 bg-circle"></div>
-        <div class="bg-circle-4 bg-circle"></div>
-    </header>
+      </div>
+    </section>
+
     <section id="about">
-        <div class="container py-4 py-xl-5">
-            <div class="row align-items-center">
-                <div class="col-lg-6 align-self-start order-lg-2">
-                    <div class="p-4"><img class="rounded-circle img-fluid" src="assets/img/Tim-Headshot3.jpg"
-                            style="transform: scale(0.80);backdrop-filter: blur(0px);-webkit-backdrop-filter: blur(0px);">
-                        <div class="row" style="margin-bottom: 1rem;text-align: center;">
-                            <div class="col"><a class="btn btn-outline-primary" role="button" target="_blank"
-                                    href="https://www.linkedin.com/in/1timnightingale"
-                                    style="width: 8.5rem;"><span>LinkedIn<svg xmlns="http://www.w3.org/2000/svg"
-                                            width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16"
-                                            class="bi bi-linkedin" style="margin-left: 2rem;">
-                                            <path
-                                                d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854V1.146zm4.943 12.248V6.169H2.542v7.225h2.401m-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248-.822 0-1.359.54-1.359 1.248 0 .694.521 1.248 1.327 1.248h.016zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016a5.54 5.54 0 0 1 .016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225h2.4">
-                                            </path>
-                                        </svg></span></a></div>
-                        </div>
-                        <div class="row" style="text-align: center;">
-                            <div class="col"><a class="btn btn-outline-primary" role="button" target="_blank"
-                                    href="https://1timnightingale.github.io/downloads/TimNightingaleCV.pdf"
-                                    style="width: 8.5rem;"><span>Resume<svg xmlns="http://www.w3.org/2000/svg"
-                                            width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16"
-                                            class="bi bi-file-earmark-pdf" style="margin-left: 2rem;">
-                                            <path
-                                                d="M14 14V4.5L9.5 0H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2M9.5 3A1.5 1.5 0 0 0 11 4.5h2V14a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h5.5z">
-                                            </path>
-                                            <path
-                                                d="M4.603 14.087a.81.81 0 0 1-.438-.42c-.195-.388-.13-.776.08-1.102.198-.307.526-.568.897-.787a7.68 7.68 0 0 1 1.482-.645 19.697 19.697 0 0 0 1.062-2.227 7.269 7.269 0 0 1-.43-1.295c-.086-.4-.119-.796-.046-1.136.075-.354.274-.672.65-.823.192-.077.4-.12.602-.077a.7.7 0 0 1 .477.365c.088.164.12.356.127.538.007.188-.012.396-.047.614-.084.51-.27 1.134-.52 1.794a10.954 10.954 0 0 0 .98 1.686 5.753 5.753 0 0 1 1.334.05c.364.066.734.195.96.465.12.144.193.32.2.518.007.192-.047.382-.138.563a1.04 1.04 0 0 1-.354.416.856.856 0 0 1-.51.138c-.331-.014-.654-.196-.933-.417a5.712 5.712 0 0 1-.911-.95 11.651 11.651 0 0 0-1.997.406 11.307 11.307 0 0 1-1.02 1.51c-.292.35-.609.656-.927.787a.793.793 0 0 1-.58.029zm1.379-1.901c-.166.076-.32.156-.459.238-.328.194-.541.383-.647.547-.094.145-.096.25-.04.361.01.022.02.036.026.044a.266.266 0 0 0 .035-.012c.137-.056.355-.235.635-.572a8.18 8.18 0 0 0 .45-.606zm1.64-1.33a12.71 12.71 0 0 1 1.01-.193 11.744 11.744 0 0 1-.51-.858 20.801 20.801 0 0 1-.5 1.05zm2.446.45c.15.163.296.3.435.41.24.19.407.253.498.256a.107.107 0 0 0 .07-.015.307.307 0 0 0 .094-.125.436.436 0 0 0 .059-.2.095.095 0 0 0-.026-.063c-.052-.062-.2-.152-.518-.209a3.876 3.876 0 0 0-.612-.053zM8.078 7.8a6.7 6.7 0 0 0 .2-.828c.031-.188.043-.343.038-.465a.613.613 0 0 0-.032-.198.517.517 0 0 0-.145.04c-.087.035-.158.106-.196.283-.04.192-.03.469.046.822.024.111.054.227.09.346z">
-                                            </path>
-                                        </svg></span></a></div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-6 order-lg-1">
-                    <div class="p-4">
-                        <h2><strong>An expert in data architecture and analytics.</strong></h2>
-                        <p style="margin-bottom: 40px;">As a seasoned Business Analyst with a passion for transforming
-                            data into strategic insights, I specialise in
-                            requirements gathering and agile delivery. My expertise spans designing robust data
-                            analytics architectures on platforms
-                            like SAP, Microsoft Azure, and AWS, always with a focus on aligning solutions to real
-                            business needs.
-                            <br><br>
-                            I thrive in collaborative, fast-paced environments, drawing on deep experience in systems
-                            integration and business
-                            intelligence tools such as SAP BusinessObjects, Tableau, and Power BI. My technical toolkit
-                            includes Python, C++,
-                            NodeJS, and a range of SQL and NoSQL databases, enabling me to craft efficient, scalable
-                            solutions that drive
-                            organisational growth.
-                            <br><br>
-                            I am committed to continuous learning and enjoy bridging the gap between technology and
-                            business, ensuring that every
-                            project delivers meaningful, actionable results.&nbsp;
-                        </p>
-                        <div id="solutoionDesign"><span>Solution Design</span>
-                            <div class="progress border rounded-pill">
-                                <div class="progress-bar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"
-                                    style="width: 90%;"><span class="visually-hidden">90%</span></div>
-                            </div>
-                            <p class="text-end">Expert</p>
-                        </div>
-                        <div id="analyticsDevelopment"><span>Analytics Development</span>
-                            <div class="progress border rounded-pill">
-                                <div class="progress-bar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"
-                                    style="width: 80%;"><span class="visually-hidden">80%</span></div>
-                            </div>
-                            <p class="text-end">Proficient</p>
-                        </div>
-                        <div id="systemsIntegration"><span>Systems Integration</span>
-                            <div class="progress border rounded-pill">
-                                <div class="progress-bar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"
-                                    style="width: 75%;"><span class="visually-hidden">75%</span></div>
-                            </div>
-                            <p class="text-end">Proficient</p>
-                        </div>
-                        <div id="dataEngineering"><span>Data Engineering</span>
-                            <div class="progress border rounded-pill">
-                                <div class="progress-bar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"
-                                    style="width: 75%;"><span class="visually-hidden">75%</span></div>
-                            </div>
-                            <p class="text-end">Proficient</p>
-                        </div>
-                        <div id="presentation"><span>Presentation and Communication</span>
-                            <div class="progress border rounded-pill">
-                                <div class="progress-bar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"
-                                    style="width: 90%;"><span class="visually-hidden">90%</span></div>
-                            </div>
-                            <p class="text-end">Expert</p>
-                        </div>
-                        <div id="businessAnalysis"><span>Business Analysis</span>
-                            <div class="progress border rounded-pill">
-                                <div class="progress-bar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"
-                                    style="width: 90%;"><span class="visually-hidden">90%</span></div>
-                            </div>
-                            <p class="text-end">Expert</p>
-                        </div>
-                    </div>
-                </div>
+      <div class="section-header">
+        <h2>About Me</h2>
+        <div class="line"></div>
+      </div>
+      <div class="about-grid">
+        <div class="about-text">
+          <p class="lead">From early beginnings with installations and troubleshooting to global technical leadership.
+          </p>
+          <p>I specialise in building data-driven cultures, leading high-performing teams, and architecting secure,
+            scalable BI and analytics in regulated environments. Known for absolute data accuracy, board-ready analytics
+            hubs, and pragmatic IoT solutions from edge to cloud.</p>
+          <div class="stats-grid">
+            <div class="stat-card">
+              <h3>86k+</h3>
+              <p>Users Supported</p>
             </div>
+            <div class="stat-card">
+              <h3>93%</h3>
+              <p>Faster Reporting</p>
+            </div>
+            <div class="stat-card">
+              <h3>200+</h3>
+              <p>Consultants Trained</p>
+            </div>
+            <div class="stat-card">
+              <h3>+6%</h3>
+              <p>Profit Growth</p>
+            </div>
+          </div>
+
+          <div class="impact-section">
+            <h3 class="impact-title">Why Hire Me?</h3>
+            <div class="impact-grid">
+              <div class="impact-card glass-card">
+                <div class="impact-icon">🌍</div>
+                <h4>Global Scale & Governance</h4>
+                <p>Built and governed a global SAP analytics hub for a Life Sciences enterprise (86,000+ users),
+                  establishing audit-ready controls, KPI alignment standards, and role-based security that scaled
+                  without surprises. Defined globally recognised best practices for security modelling and lifecycle
+                  management.</p>
+              </div>
+              <div class="impact-card glass-card">
+                <div class="impact-icon">📊</div>
+                <h4>Executive Decision Hubs</h4>
+                <p>Designed executive analytics hubs across Plant Manufacturing, Aerospace, and Government—touch-screen
+                  and voice-enabled dashboards with consolidated KPIs—accelerating real-time decision-making. Developed
+                  monthly reporting solutions that cut completion time by over 93%.</p>
+              </div>
+              <div class="impact-card glass-card">
+                <div class="impact-icon">🚀</div>
+                <h4>Migration Leadership</h4>
+                <p>Led global SAP BusinessObjects migrations, authoring repeatable playbooks, rescuing 5 key global
+                  account projects, and training 200+ consultants worldwide. Shared process innovations at US and EMEA
+                  industry conferences.</p>
+              </div>
+              <div class="impact-card glass-card">
+                <div class="impact-icon">📡</div>
+                <h4>IoT Innovation</h4>
+                <p>Engineered IoT analytics pipelines end-to-end (e.g., LoRaWAN farm monitoring), implementing
+                  privacy-enhancing Decoy Data workflows, and creating bespoke compression/encoding to cut bandwidth and
+                  cost while keeping signal fidelity.</p>
+              </div>
+              <div class="impact-card glass-card">
+                <div class="impact-icon">📈</div>
+                <h4>Operational Impact</h4>
+                <p>Drove operational and financial improvements across 22 hospitality venues, increasing gross profit
+                  from 72% to 78% year-on-year. Earned promotion to a head-office analytics role for performance,
+                  efficiency gains, and pragmatic leadership.</p>
+              </div>
+            </div>
+          </div>
         </div>
+      </div>
     </section>
-    <section id="resume">
-        <div style="height: 4rem;"></div>
-        <div class="container py-4 py-xl-5">
-            <div class="row align-items-center">
-                <div class="col-lg-6 order-lg-1" data-aos="zoom-in-up" data-aos-once="true">
-                    <div class="col">
-                        <h2 class="display-4">Resume</h2>
-                        <div class="accordion" role="tablist" id="accordion">
-                            <div class="accordion-item">
-                                <h2 class="accordion-header" role="tab"><button class="accordion-button" type="button"
-                                        data-bs-toggle="collapse" data-bs-target="#accordion .item-1"
-                                        aria-expanded="true" aria-controls="accordion .item-1">Kern Analytics: 2023 -
-                                        present</button></h2>
-                                <div class="accordion-collapse collapse show item-1" role="tabpanel"
-                                    data-bs-parent="#accordion">
-                                    <div class="accordion-body">
-                                        <h5>Analytics Architect</h5>
-                                        <p class="mb-0">Designed and developed integrated solutions utilizing advanced
-                                            technologies such as LoRaWAN and IoT for various sectors.<br><br>Engineered
-                                            a field-based monitoring system to track the status of farm gates using
-                                            LoRaWAN communication, ensuring
-                                            accurate data transmission and device reliability.<br><br>Implemented
-                                            innovative data encoding and compression techniques for efficient
-                                            communications in IoT applications,
-                                            reducing data payload to 56 bytes per message.&nbsp;</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="accordion-item">
-                                <h2 class="accordion-header" role="tab"><button class="accordion-button collapsed"
-                                        type="button" data-bs-toggle="collapse" data-bs-target="#accordion .item-2"
-                                        aria-expanded="false" aria-controls="accordion .item-2">Capgemini UK: Nov 2022
-                                        - Jul 2023</button></h2>
-                                <div class="accordion-collapse collapse item-2" role="tabpanel"
-                                    data-bs-parent="#accordion">
-                                    <div class="accordion-body">
-                                        <h5>Senior Engineering Lead</h5>
-                                        <p class="mb-0">Led the technical implementation of an innovative analytical
-                                            product for a UK Government client, coordinating with a
-                                            diverse team across multiple geographic locations.<br><br>Oversaw project
-                                            planning, reporting, resource allocation, and budgeting, ensuring alignment
-                                            with the client's
-                                            expectations and requirements.<br><br>Provided mentorship to junior
-                                            engineers on solution design, prototyping, and stakeholder presentations,
-                                            fostering a
-                                            culture of innovation and collaboration.&nbsp;</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="accordion-item">
-                                <h2 class="accordion-header" role="tab"><button class="accordion-button collapsed"
-                                        type="button" data-bs-toggle="collapse" data-bs-target="#accordion .item-3"
-                                        aria-expanded="false" aria-controls="accordion .item-3">Mindtree UK (Bluefin
-                                        Soutions): Sep 2015 - Oct 2022</button></h2>
-                                <div class="accordion-collapse collapse item-3" role="tabpanel"
-                                    data-bs-parent="#accordion">
-                                    <div class="accordion-body">
-                                        <h5>BI Principal Consultant</h5>
-                                        <p class="mb-0">Led the deployment of SAP Analytics Cloud applications,
-                                            effectively integrating them into clients' existing BI
-                                            landscapes and strategy roadmaps.<br><br>Facilitated pre-sales activities,
-                                            emphasising the critical role of data analytics in achieving client
-                                            objectives, which
-                                            drove successful solution delivery.<br><br>Developed and implemented
-                                            innovative digital voice assistance solutions paired with large-scale
-                                            dashboards, enhancing
-                                            user experience and decision-making.&nbsp;</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="accordion-item">
-                                <h2 class="accordion-header" role="tab"><button class="accordion-button collapsed"
-                                        type="button" data-bs-toggle="collapse" data-bs-target="#accordion .item-4"
-                                        aria-expanded="false" aria-controls="accordion .item-4">SAP UK: Jan 2000 - Jul
-                                        2015</button></h2>
-                                <div class="accordion-collapse collapse item-4" role="tabpanel"
-                                    data-bs-parent="#accordion">
-                                    <div class="accordion-body">
-                                        <h5>Solution Architect</h5>
-                                        <p class="mb-0">Led initiatives on Business Intelligence applications, providing
-                                            knowledge transfer to clients and internal teams to
-                                            enhance deployment effectiveness.<br><br>Developed expertise in key
-                                            technologies including ETL processes, data modelling, and analytics
-                                            platforms, contributing
-                                            to improved system performance and reporting
-                                            capabilities.<br><br>Collaborated in a global team to ensure seamless
-                                            customer migrations, while actively participating in product management
-                                            discussions and tool testing.&nbsp;</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="accordion-item">
-                                <h2 class="accordion-header" role="tab"><button class="accordion-button collapsed"
-                                        type="button" data-bs-toggle="collapse" data-bs-target="#accordion .item-5"
-                                        aria-expanded="false" aria-controls="accordion .item-5">Early Careers</button>
-                                </h2>
-                                <div class="accordion-collapse collapse item-5" role="tabpanel"
-                                    data-bs-parent="#accordion">
-                                    <div class="accordion-body">
-                                        <p class="mb-0">Accumulated over 10 years of diverse experience in the
-                                            hospitality and licensed trade sectors, developing a strong
-                                            foundation in business management principles and customer service
-                                            optimisation.<br><br>Demonstrated significant leadership by managing
-                                            high-turnover venues, earning three prestigious national promotions in
-                                            recognition of exemplary operational success and team
-                                            performance.<br><br>Advanced to a Head Office position responsible for data
-                                            analytics across 22 locations, where I implemented strategic
-                                            insights that significantly enhanced operational efficiency and
-                                            profitability.&nbsp;</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="accordion-item">
-                                <h2 class="accordion-header" role="tab"><button class="accordion-button collapsed"
-                                        type="button" data-bs-toggle="collapse" data-bs-target="#accordion .item-6"
-                                        aria-expanded="false" aria-controls="accordion .item-6">Hobbies and
-                                        interests</button></h2>
-                                <div class="accordion-collapse collapse item-6" role="tabpanel"
-                                    data-bs-parent="#accordion">
-                                    <div class="accordion-body">
-                                        <p class="mb-0">I am always up for learning something new including; PCB design
-                                            and fabrication, IoT solutions (sensors, communication &
-                                            data analysis), lock picking, solving puzzles, graphic design, laser
-                                            engraving and cutting, business management and
-                                            e-commerce, LED lighting and electronics, cooking, arts and crafts, cyber
-                                            security.<br><br>I also volunteer at a local community theatre where I help
-                                            manage rotas, and
-                                            perform varied roles from duty manager to
-                                            confectionary seller.<br><br>I enjoy the outdoors and am often helping my
-                                            children understand and respect
-                                            nature, and how we can learn from it. As a
-                                            teenager I enjoyed orienteering and still have the navigational sense to
-                                            know how to get back, letting the children lead
-                                            the way.<br><br>I enjoy photography and should undertake it more often. In
-                                            the past I have
-                                            experimented with Infa-red and stereoscopic
-                                            images.&nbsp;</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="accordion-item">
-                                <h2 class="accordion-header" role="tab"><button class="accordion-button collapsed"
-                                        type="button" data-bs-toggle="collapse" data-bs-target="#accordion .item-7"
-                                        aria-expanded="false" aria-controls="accordion .item-7"><span
-                                            class="education-icon">🎓</span>Education</button></h2>
-                                <div class="accordion-collapse collapse item-7" role="tabpanel"
-                                    data-bs-parent="#accordion">
-                                    <div class="accordion-body">
-                                        <p class="mb-0">
-                                            <strong>A Level:</strong> Computer Studies<br><br>
-                                            <strong>Certifications:</strong> SAP Certified Professional<br>
-                                            Contributed to SAP certification exam development<br><br>
-                                            Various online learning, including Snowflake<br><br>
-                                            <strong>Continuous Learning:</strong> Continuously update my skills through
-                                            online courses, industry research, and
-                                            hands-on experimentation with emerging technologies in analytics and cloud
-                                            platforms.
-                                            &nbsp;
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-6 order-lg-2" data-aos="zoom-in-up" data-aos-once="true">
-                    <div class="p-5">
-                        <lottie-player class="rounded-circle img-fluid" src="assets/js/resumeAnimation.json"
-                            mode="normal" autoplay="" loop=""></lottie-player>
-                    </div>
-                </div>
-            </div>
+
+    <section id="experience">
+      <div class="section-header">
+        <h2>Experience</h2>
+        <div class="line"></div>
+      </div>
+      <div class="timeline">
+
+        <div class="timeline-item">
+          <div class="timeline-date">Aug 2023 - Oct 2025</div>
+          <div class="timeline-content glass-card">
+            <h3>Analytics Architect</h3>
+            <h4>Kern Analytics</h4>
+            <p>Designed and delivered integrated IoT data solutions and privacy-enhancing analytics across sectors.
+              Combined edge capture with cloud pipelines for resilient, low-touch operations.</p>
+            <ul>
+              <li>Advanced bespoke encoding and compression for sensor streams.</li>
+              <li>Implemented governance guardrails and audit-ready logging.</li>
+            </ul>
+          </div>
         </div>
+
+        <div class="timeline-item">
+          <div class="timeline-date">Nov 2022 - Jul 2023</div>
+          <div class="timeline-content glass-card">
+            <h3>Senior Engineering Lead</h3>
+            <h4>Capgemini UK</h4>
+            <p>Led technical delivery of a high-profile government analytical product. Orchestrated cross-site teams and
+              mentored engineers.</p>
+            <ul>
+              <li>Aligned architecture with security and performance requirements.</li>
+              <li>Established repeatable build/test practices.</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-date">Sep 2015 - Oct 2022</div>
+          <div class="timeline-content glass-card">
+            <h3>BI Principal Consultant</h3>
+            <h4>Mindtree UK</h4>
+            <p>Implemented SAP Analytics Cloud at enterprise scale. Built voice-assisted, touch-friendly dashboards for
+              C-suite use.</p>
+            <ul>
+              <li>Shaped migration and adoption playbooks.</li>
+              <li>Championed data-driven strategies.</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-date">Earlier Roles</div>
+          <div class="timeline-content glass-card">
+            <h3>Solution Architect & Global Lead</h3>
+            <h4>SAP UK & Others</h4>
+            <p>Led end-to-end BI programmes and global BusinessObjects migrations.</p>
+            <p>Drove operational improvements across hospitality venues in early career.</p>
+          </div>
+        </div>
+
+      </div>
     </section>
-    <section id="career">
-        <div style="height: 4rem;"></div>
-        <div class="container py-4 py-xl-5">
-            <div class="row mb-5">
-                <div class="col-md-8 col-xl-6 text-center mx-auto">
-                    <h2 class="display-4">Career Highlights</h2>
-                </div>
-            </div>
-            <div class="row gy-4 row-cols-1 row-cols-md-2 row-cols-xl-3">
-                <div class="col" data-aos="zoom-in-up" data-aos-duration="600" data-aos-delay="300"
-                    data-aos-once="true">
-                    <div class="card">
-                        <lottie-player class="d-block card-img-top w-100 fit-cover"
-                            src="assets/js/dashboardAnimation.json" mode="normal" autoplay="" loop=""
-                            style="transform: scale(0.90);"></lottie-player>
-                        <div class="card-body p-4">
-                            <h4 class="card-title">Plant equipment manufacturer</h4>
-                            <p class="card-text">Pioneered the development of an interactive, touch-enabled dashboard
-                                solution that facilitated in-depth analysis of key
-                                service metrics for executive stakeholders during VIP engagements, significantly
-                                enhancing the managerial oversight
-                                capabilities.<br><br>Facilitated the design and deployment of tailored dashboards for
-                                each executive director, leveraging faceted filtering
-                                techniques to replace traditional hierarchical data drilling, thereby improving both
-                                user experience and informed
-                                decision-making processes.<br><br>Strategically integrated a digital voice assistant
-                                (Alexa) with an SAP-based dashboard displayed on a substantial 80 sqm
-                                16K screen, resulting in an innovative approach to data access and user interaction,
-                                fostering a modernised data culture
-                                within the organisation.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col" data-aos="zoom-in-up" data-aos-duration="600" data-aos-delay="300"
-                    data-aos-once="true">
-                    <div class="card">
-                        <lottie-player class="d-block card-img-top w-100 fit-cover" src="assets/js/aeroAnimation.json"
-                            mode="normal" autoplay="" loop="" style="transform: scale(0.95);"></lottie-player>
-                        <div class="card-body p-4">
-                            <h4 class="card-title">Multinational aerospace and defence company</h4>
-                            <p class="card-text">Spearheaded the design and deployment of a global dashboard that
-                                innovatively transformed 54 KPIs into eight actionable
-                                insights, achieved through meticulous data modelling strategies aimed at enhancing user
-                                interactivity and system
-                                performance.<br><br>Executed comprehensive performance testing strategies that combined
-                                automated scripting with real user scenarios,
-                                leading to significant performance optimisation by monitoring application responsiveness
-                                in tandem with client-side
-                                interaction.<br><br>Crafted and rolled out a detailed application security model that
-                                complied with stringent export control regulations and
-                                user access protocols, facilitating cross-departmental collaboration with suppliers to
-                                ensure a smooth implementation
-                                process.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col" data-aos="zoom-in-up" data-aos-duration="600" data-aos-delay="300"
-                    data-aos-once="true">
-                    <div class="card">
-                        <lottie-player class="d-block card-img-top w-100 fit-cover"
-                            src="assets/js/migrationAnimation.json" mode="normal" autoplay="" loop=""
-                            style="transform: scale(0.90);"></lottie-player>
-                        <div class="card-body p-4">
-                            <h4 class="card-title">SAP/Business Objects - Global Migration Team</h4>
-                            <p class="card-text">Engineered and implemented detailed migration protocols, best
-                                practices, and instructional resources, which empowered
-                                clients to successfully navigate transitions from outdated SAP/Business Objects
-                                platforms to the latest technologies,
-                                ensuring minimal disruption and maximising operational efficiency.<br><br>Assumed the
-                                role of technical lead in a diverse multinational team dedicated to global migrations;
-                                provided expert
-                                training in migration best practices to consultants in North America, Europe, and Asia,
-                                thereby enhancing their skill
-                                sets and ensuring project success.<br><br>Actively engaged in promoting
-                                knowledge-sharing by delivering impactful presentations at numerous user and partner
-                                conferences, while simultaneously ensuring the SAP certification test questions were
-                                kept current and relevant in
-                                alignment with migration processes.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col" data-aos="zoom-in-up" data-aos-duration="600" data-aos-delay="300"
-                    data-aos-once="true">
-                    <div class="card">
-                        <lottie-player class="d-block card-img-top w-100 fit-cover" src="assets/js/healthAnimation.json"
-                            mode="normal" autoplay="" loop="" style="padding-top: 2rem;"></lottie-player>
-                        <div class="card-body p-4">
-                            <h4 class="card-title">Multinational healthcare company</h4>
-                            <p class="card-text">Established the first BI Competency Centre for a Swiss multinational
-                                healthcare company, focusing on SAP Analytics
-                                solutions and incorporating best practices for compliance.
-                                <br><br>Designed and implemented a customized security model and lifecycle management
-                                processes to ensure self-sufficiency and
-                                operational efficiency for over 86,000 global users.
-                                <br><br>Collaborated with SAP Product Managers to develop and test migration strategies,
-                                successfully executing a major system
-                                upgrade in four increments, each with minimal downtime.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col" data-aos="zoom-in-up" data-aos-duration="600" data-aos-delay="300"
-                    data-aos-once="true">
-                    <div class="card">
-                        <lottie-player class="d-block card-img-top w-100 fit-cover"
-                            src="assets/js/processAnimation.json" mode="normal" autoplay="" loop=""
-                            style="transform: scale(1.10);"></lottie-player>
-                        <div class="card-body p-4">
-                            <h4 class="card-title">UK Government Ministry</h4>
-                            <p class="card-text">Streamlined the monthly report creation process for UK government
-                                ministries by leveraging Web Intelligence, reducing
-                                production time from two days to just a few hours.
-                                <br><br>It would take roughly two days to produce each pack,
-                                allowing for the inclusion of pertinent commentary and meeting the strict month-end
-                                closure deadlines.<br><br>Integrated existing Excel data rules into automated report
-                                generation, ensuring accurate data representation and
-                                incorporating necessary commentary directly within the reports.
-                                <br><br>Contributed to the analytics strategy by implementing cloud SaaS applications
-                                while ensuring compliance with UK data
-                                governance and sovereignty regulations.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </div>
+
+    <section id="skills">
+      <div class="section-header">
+        <h2>Technical Expertise</h2>
+        <div class="line"></div>
+      </div>
+      <div class="skills-grid">
+        <div class="skill-category glass-card">
+          <h3>Data & Analytics</h3>
+          <div class="tags">
+            <span>Data Modelling</span>
+            <span>ETL</span>
+            <span>Warehousing</span>
+            <span>Dashboard Design</span>
+            <span>KPI Standardisation</span>
+          </div>
         </div>
+        <div class="skill-category glass-card">
+          <h3>Cloud & BI</h3>
+          <div class="tags">
+            <span>Azure</span>
+            <span>AWS</span>
+            <span>GCP</span>
+            <span>Snowflake</span>
+            <span>Databricks</span>
+            <span>SAP Analytics Cloud</span>
+            <span>Tableau</span>
+            <span>Power BI</span>
+          </div>
+        </div>
+        <div class="skill-category glass-card">
+          <h3>Programming & IoT</h3>
+          <div class="tags">
+            <span>Python</span>
+            <span>Node.js</span>
+            <span>React</span>
+            <span>SQL/NoSQL</span>
+            <span>LoRaWAN</span>
+            <span>MQTT</span>
+            <span>Kafka</span>
+          </div>
+        </div>
+        <div class="skill-category glass-card">
+          <h3>Leadership</h3>
+          <div class="tags">
+            <span>Cross-functional Leadership</span>
+            <span>Project Management</span>
+            <span>Mentoring</span>
+            <span>Agile Delivery</span>
+            <span>Stakeholder Management</span>
+          </div>
+        </div>
+      </div>
     </section>
-    <section id="technology" class="photo-gallery py-4 py-xl-5">
-        <div style="height: 4rem;"></div>
-        <div class="container">
-            <div class="row mb-5">
-                <div class="col-md-8 col-xl-6 text-center mx-auto">
-                    <h2 class="display-4">Technology</h2>
-                    <p class="w-lg-50">Over my many years of experience, I have worked with many applications and
-                        technologies. I also keep myself up to date with new concepts, learning at home using docker
-                        containers. I have included some of those below.</p>
-                </div>
-            </div>
-            <div class="row gx-2 gy-2 row-cols-2 row-cols-md-3 row-cols-xl-4 photos" data-bss-baguettebox="">
-                <div class="col align-self-center item" data-aos="zoom-in-up" data-aos-duration="600"
-                    data-aos-delay="450" data-aos-once="true"><img class="img-fluid" src="assets/img/Alexa2-logo-p.png">
-                </div>
-                <div class="col align-self-center item" data-aos="zoom-in-up" data-aos-duration="600"
-                    data-aos-delay="450" data-aos-once="true"><img class="img-fluid"
-                        src="assets/img/Arduino-logo-p.png"></div>
-                <div class="col align-self-center item" data-aos="zoom-in-up" data-aos-duration="600"
-                    data-aos-delay="450" data-aos-once="true"><img class="img-fluid" src="assets/img/AWS-logo-p.png">
-                </div>
-                <div class="col align-self-center item" data-aos="zoom-in-up" data-aos-duration="600"
-                    data-aos-delay="450" data-aos-once="true"><img class="img-fluid" src="assets/img/Azure-logo-p.png">
-                </div>
-                <div class="col align-self-center item" data-aos="zoom-in-up" data-aos-duration="600"
-                    data-aos-delay="450" data-aos-once="true"><img class="img-fluid"
-                        src="assets/img/Confluent-logo-p.png"></div>
-                <div class="col align-self-center item" data-aos="zoom-in-up" data-aos-duration="600"
-                    data-aos-delay="450" data-aos-once="true"><img class="img-fluid" src="assets/img/Docker-logo-p.png">
-                </div>
-                <div class="col align-self-center item" data-aos="zoom-in-up" data-aos-duration="600"
-                    data-aos-delay="450" data-aos-once="true"><img class="img-fluid" src="assets/img/Figma-logo.png">
-                </div>
-                <div class="col align-self-center item" data-aos="zoom-in-up" data-aos-duration="600"
-                    data-aos-delay="450" data-aos-once="true"><img class="img-fluid"
-                        src="assets/img/GoogleCloud-logo-p.png"></div>
-                <div class="col align-self-center item" data-aos="zoom-in-up" data-aos-duration="600"
-                    data-aos-delay="450" data-aos-once="true"><img class="img-fluid"
-                        src="assets/img/Grafana-logo-p.png"></div>
-                <div class="col align-self-center item" data-aos="zoom-in-up" data-aos-duration="600"
-                    data-aos-delay="450" data-aos-once="true"><img class="img-fluid" src="assets/img/Kafka-logo-p.png">
-                </div>
-                <div class="col align-self-center item" data-aos="zoom-in-up" data-aos-duration="600"
-                    data-aos-delay="450" data-aos-once="true"><img class="img-fluid"
-                        src="assets/img/MongoDB-logo-p.png"></div>
-                <div class="col align-self-center item" data-aos="zoom-in-up" data-aos-duration="600"
-                    data-aos-delay="450" data-aos-once="true"><img class="img-fluid" src="assets/img/MQTT-logo-p.png">
-                </div>
-                <div class="col align-self-center item" data-aos="zoom-in-up" data-aos-duration="600"
-                    data-aos-delay="450" data-aos-once="true"><img class="img-fluid" src="assets/img/MySQL-logo-p.png">
-                </div>
-                <div class="col align-self-center item" data-aos="zoom-in-up" data-aos-duration="600"
-                    data-aos-delay="450" data-aos-once="true"><img class="img-fluid" src="assets/img/n8n-logo-p.png">
-                </div>
-                <div class="col align-self-center item" data-aos="zoom-in-up" data-aos-duration="600"
-                    data-aos-delay="450" data-aos-once="true"><img class="img-fluid" src="assets/img/NodeJS-logo-p.png">
-                </div>
-                <div class="col align-self-center item" data-aos="zoom-in-up" data-aos-duration="600"
-                    data-aos-delay="450" data-aos-once="true"><img class="img-fluid"
-                        src="assets/img/NodeRed-logo-p.png"></div>
-                <div class="col align-self-center item" data-aos="zoom-in-up" data-aos-duration="600"
-                    data-aos-delay="450" data-aos-once="true"><img class="img-fluid" src="assets/img/Notion-logo-p.png">
-                </div>
-                <div class="col align-self-center item" data-aos="zoom-in-up" data-aos-duration="600"
-                    data-aos-delay="450" data-aos-once="true"><img class="img-fluid" src="assets/img/OBS-logo-p.png">
-                </div>
-                <div class="col align-self-center item" data-aos="zoom-in-up" data-aos-duration="600"
-                    data-aos-delay="450" data-aos-once="true"><img class="img-fluid" src="assets/img/Office-logo-p.png">
-                </div>
-                <div class="col align-self-center item" data-aos="zoom-in-up" data-aos-duration="600"
-                    data-aos-delay="450" data-aos-once="true"><img class="img-fluid" src="assets/img/Oracle-logo-p.png">
-                </div>
-                <div class="col align-self-center item" data-aos="zoom-in-up" data-aos-duration="600"
-                    data-aos-delay="450" data-aos-once="true"><img class="img-fluid"
-                        src="assets/img/PowerBI-logo-p.png"></div>
-                <div class="col align-self-center item" data-aos="zoom-in-up" data-aos-duration="600"
-                    data-aos-delay="450" data-aos-once="true"><img class="img-fluid" src="assets/img/React-logo-p.png">
-                </div>
-                <div class="col align-self-center item" data-aos="zoom-in-up" data-aos-duration="600"
-                    data-aos-delay="450" data-aos-once="true"><img class="img-fluid" src="assets/img/SAP-logo-p.png">
-                </div>
-                <div class="col align-self-center item" data-aos="zoom-in-up" data-aos-duration="600"
-                    data-aos-delay="450" data-aos-once="true"><img class="img-fluid"
-                        src="assets/img/snowflake-logo.png">
-                </div>
-                <div class="col align-self-center item" data-aos="zoom-in-up" data-aos-duration="600"
-                    data-aos-delay="450" data-aos-once="true"><img class="img-fluid"
-                        src="assets/img/SQLServer-logo-p.png"></div>
-                <div class="col align-self-center item" data-aos="zoom-in-up" data-aos-duration="600"
-                    data-aos-delay="450" data-aos-once="true"><img class="img-fluid"
-                        src="assets/img/TheThingsNetwork-logo-RGB-p.png"></div>
-            </div>
+
+    <section id="contact">
+      <div class="glass-card contact-card">
+        <h2>Let's Connect</h2>
+        <p>Ready to discuss how I can drive value for your organization?</p>
+        <div class="contact-links">
+          <a href="mailto:timnightingale@gmail.com" class="contact-link">
+            <span class="icon">✉️</span> timnightingale@gmail.com
+          </a>
+          <a href="https://linkedin.com/in/timnightingale" target="_blank" class="contact-link">
+            <span class="icon">🔗</span> LinkedIn
+          </a>
+          <a href="https://techntrek.co.uk" target="_blank" class="contact-link">
+            <span class="icon">🌐</span> techntrek.co.uk
+          </a>
         </div>
+      </div>
     </section>
-    <footer class="py-5" style="border-top: 1px solid var(--bs-secondary) ;">
-        <div class="container">
-            <p class="text-center m-0 small">Copyright&nbsp;© Tim Nightingale 2025</p>
-        </div>
-    </footer>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@lottiefiles/lottie-player@1.5.7/dist/lottie-player.min.js"></script>
-    <script src="assets/js/bs-init.js"></script>
-    <script src="assets/js/Lightbox-Gallery-baguetteBox.min.js"></script>
-    <script src="assets/js/Lightbox-Gallery.js"></script>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Tim Nightingale. Built with precision.</p>
+  </footer>
+
+  <script type="module" src="/main.js"></script>
 </body>
 
 </html>
