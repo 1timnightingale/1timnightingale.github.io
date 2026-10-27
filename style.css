@@ -246,13 +246,13 @@ h2 {
 
 /* Sections */
 section {
-  padding: 6rem 10%;
+  padding: 2rem 10%;
   max-width: 1400px;
   margin: 0 auto;
 }
 
 .section-header {
-  margin-bottom: 4rem;
+  margin-bottom: 1rem;
   display: flex;
   align-items: center;
   gap: 1rem;
@@ -317,7 +317,7 @@ section {
 
 /* Why Hire Me / Impact Section */
 .impact-section {
-  margin-top: 6rem;
+  margin-top: 0rem;
 }
 
 .impact-title {
@@ -363,7 +363,18 @@ section {
 
 .impact-icon {
   font-size: 2rem;
+  line-height: 1;
+  min-height: 2.5rem;
+  display: flex;
+  align-items: center;
   margin-bottom: 1rem;
+}
+
+.impact-icon-img {
+  width: 2.75rem;
+  height: 2.75rem;
+  object-fit: contain;
+  display: block;
 }
 
 .impact-card h4 {
